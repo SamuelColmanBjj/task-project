@@ -3,4 +3,4 @@ from .models import Tarea
 
 admin.site.register(Tarea)
 
-# Register your models here.
+
