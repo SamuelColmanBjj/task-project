@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import ListaPendientes, DetalleTarea, CrearTarea, EditarTarea, EliminarTarea, Logueo
+from .views import ListaPendientes, DetalleTarea, CrearTarea, EditarTarea, EliminarTarea, Logueo, PaginaRegistro
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [path('', ListaPendientes.as_view(), name='tareas'),
+               path('registro/', PaginaRegistro.as_view(), name='registro'),
                path('login/', Logueo.as_view(), name='login'),
                path('logout/', auth_views.LogoutView.as_view(), name='logout'),
                path('tarea/<int:pk>', DetalleTarea.as_view(), name='tarea'),
